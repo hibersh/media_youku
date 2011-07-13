@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the Media: Youku module.
+ */
+
+/**
+ * Implement hook_install().
+ */
+function media_youku_install() {
+  return array();
+}
+
+/**
+ * Implement hook_uninstall().
+ */
+function media_youku_uninstall() {
+  drupal_load('module', 'media_youku');
+  foreach (media_youku_variable_default() as $variable => $value) {
+    media_youku_variable_del($variable);
+  }
+  return array(array('success' => TRUE, 'query' => "Deleted all variables in the Media: Youku namespace."));
+}
+

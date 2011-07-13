@@ -1,0 +1,11 @@
+
+name = Media: Youku
+description = Provides Youku support to the Media module.
+package = "Media"
+core = 7.x
+files[] = media_youku.module
+files[] = includes/MediaYoukuStreamWrapper.inc
+files[] = includes/MediaInternetYoukuHandler.inc
+files[] = includes/media_youku.styles.inc
+files[] = includes/MediaYoukuStyles.inc
+dependencies[] = media_internet
